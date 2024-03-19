@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #83cce2, #9886ff); /* Degradado de verde a rojo */
+}
+.background {
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(233, 231, 231, 0.3); /* Color de fondo semi-transparente */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    max-width: 60%; /* Limita el ancho máximo del contenedor */
+}
+h1 {
+    font-size: 40px;
+    color: rgb(129, 84, 255);
+}
+
+p {
+    color: rgb(129, 84, 255);
+    font-size: 20px;
+    margin-top: 5px;
+    max-width: 100%; /* Limita el ancho máximo del párrafo */
+}
+
+/* Estilos para los botones */
+.options {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #7b6bc2;
+    color: white;
+    border-radius: 5px;
+}
+
+#btnNo {
+    background-color: #2400c7;
+}
+
+/* Estilos para el contenedor de corazones */
+.hearts {
+    position: fixed; /* Asegura que el contenedor de corazones esté fijo en la pantalla */
+    top: 0; /* Alinea el contenedor de corazones en la parte superior de la pantalla */
+    left: 0; /* Alinea el contenedor de corazones en el borde izquierdo de la pantalla */
+    width: 100%; /* Ajusta el ancho del contenedor de corazones al 100% del ancho de la pantalla */
+    height: 100%; /* Ajusta la altura del contenedor de corazones al 100% de la altura de la pantalla */
+    pointer-events: none; /* Permite que los clics pasen a través del contenedor de corazones */
+}
+
+/* Estilos para los corazones */
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('corazoncito.png'); /* Reemplaza 'heart.png' con la ruta de tu imagen de corazón */
+    background-size: cover;
+    animation: floatHeart 3s linear infinite; /* Repetir la animación infinitamente */
+    bottom: 0; /* Asegura que los corazones comiencen desde la parte inferior de la pantalla */
+}
+
+img {
+    max-width: 30%; /* Limita el ancho máximo de la imagen al 100% del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    margin-top: 20px;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+ul {
+    color: antiquewhite;
+    background-color: #63a8d67c; /* Color de fondo azul */
+    padding: 30px; /* Añade un poco de espacio alrededor de la lista */
+    border-radius: 5px; /* Agrega bordes redondeados */
+}
+
+/* Animación para los corazones */
+@keyframes floatHeart {
+    0% {
+        top: 100%; /* Comenzar desde abajo de la pantalla */
+        opacity: 0; /* Comenzar con opacidad cero */
+    }
+    50% {
+        opacity: 1; /* Aumentar la opacidad al 50% */
+    }
+    100% {
+        top: 0; /* Subir hasta la parte superior de la pantalla */
+        opacity: 0; /* Desaparecer con opacidad cero */
+    }
+}
+
+/* Estilos para el mensaje */
+.message {
+    position: fixed;
+    top: 50%; /* Alinea el mensaje en el centro vertical */
+    left: 50%; /* Alinea el mensaje en el centro horizontal */
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: #7cb5f7;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ab8ffa; /* Color rojo */
+    font-family: Arial, sans-serif;
+    max-width: 80%; /* Limita el ancho máximo del mensaje */
+    text-align: center;
+    z-index: 9999;
+}
+
+
